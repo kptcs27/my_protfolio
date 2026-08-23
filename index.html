@@ -1,119 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POOJASHREE | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-        *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
-        body{background:#87CEEB;color:#222;overflow-x:hidden}
-        header{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.9);backdrop-filter:blur(10px);z-index:100;padding:15px 8%;border-bottom:1px solid #ddd;box-shadow:0 2px 10px rgba(0,0,0,0.1)}
-        nav{display:flex;justify-content:space-between;align-items:center}
-        .logo{font-size:24px;font-weight:700;color:#0b0b12} .logo span{color:#0077b6}
-        .nav-links{display:flex;gap:25px;list-style:none}
-        .nav-link{color:#333;text-decoration:none;font-weight:500;transition:0.3s} .nav-link:hover,.nav-link.active{color:#0077b6}
-        .home{min-height:100vh;display:flex;justify-content:space-between;align-items:center;padding:120px 8% 60px;flex-wrap:wrap;gap:40px}
-        .welcome{color:#0077b6;letter-spacing:3px;font-size:13px;margin-bottom:15px;font-weight:700}
-        .home-content h1{font-size:50px;line-height:1.2;color:#0b0b12} .home-content h1 span{color:#0077b6}
-        .home-content h2{font-size:20px;color:#444;margin:15px 0;font-weight:400}
-        .intro{color:#333;max-width:500px;margin:20px 0;line-height:1.6}
-        .home-buttons{display:flex;gap:15px;margin-top:25px}
-        .btn{background:#0b0b12;color:#fff;padding:12px 25px;border-radius:30px;text-decoration:none;font-weight:600;display:inline-block;transition:0.3s;border:none;cursor:pointer}
-        .btn:hover{transform:translateY(-3px)} .yellow-btn{background:#0077b6;color:#fff}
-        .profile-circle{width:320px;height:320px;border-radius:50%;overflow:hidden;border:5px solid #fff;box-shadow:0 0 40px rgba(0,0,0,0.2)}
-        .profile-circle img{width:100%;height:100%;object-fit:cover}
-        .section{padding:80px 8%}
-        .section-heading{text-align:center;margin-bottom:50px} .section-heading p{color:#0077b6;letter-spacing:3px;font-size:13px;font-weight:700} .section-heading h1{font-size:40px;margin-top:10px;color:#0b0b12} .section-heading h1 span{color:#0077b6}
-        .about-container{display:grid;grid-template-columns:1.2fr 0.8fr;gap:40px}
-        .about-content p{color:#333;margin:15px 0;line-height:1.7}
-        .about-details{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-        .detail-card{background:#fff;padding:20px;border-radius:12px;border:1px solid #e0e0e0;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,0.05)}
-        .detail-card i{font-size:28px;color:#0077b6;margin-bottom:10px}
-        .skills-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-        .skill-card{background:#fff;padding:25px;border-radius:12px;border:1px solid #e0e0e0;transition:0.3s;box-shadow:0 5px 15px rgba(0,0,0,0.05)} .skill-card:hover{border-color:#0077b6;transform:translateY(-5px)}
-        .skill-card i{font-size:35px;color:#0077b6;margin-bottom:12px}
-        .resume-container{background:#fff;padding:50px;border-radius:15px;text-align:center;border:1px solid #e0e0e0;max-width:600px;margin:0 auto;box-shadow:0 5px 20px rgba(0,0,0,0.08)}
-        .resume-container i.fa-file-pdf{font-size:60px;color:#0077b6;margin-bottom:20px}
-        .resume-buttons{display:flex;gap:15px;justify-content:center;margin-top:25px;flex-wrap:wrap}
-        .contact-container{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-        .contact-form{background:#fff;padding:30px;border-radius:12px;border:1px solid #e0e0e0;box-shadow:0 5px 15px rgba(0,0,0,0.05)}
-        .contact-form input,.contact-form textarea{width:100%;padding:12px 15px;background:#f0f9ff;border:1px solid #cce7ff;border-radius:8px;color:#222;margin-bottom:15px;outline:none}
-        .contact-form input:focus,.contact-form textarea:focus{border-color:#0077b6}
-        .contact-info .contact-item{display:flex;gap:15px;margin:20px 0;align-items:center}
-        .contact-item i{width:45px;height:45px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#0077b6;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
-        .social-icons{display:flex;gap:12px;margin-top:20px} .social-icons a{width:40px;height:40px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#0077b6;text-decoration:none;border:1px solid #e0e0e0;transition:0.3s} .social-icons a:hover{background:#0077b6;color:#fff}
-        footer{text-align:center;padding:30px;border-top:1px solid #a0d2eb;color:#333;margin-top:40px;background:rgba(255,255,255,0.5)}
-        @media(max-width:900px){.home{flex-direction:column-reverse;text-align:center}.home-buttons{justify-content:center}.about-container,.contact-container{grid-template-columns:1fr}.nav-links{display:none}.home-content h1{font-size:36px}}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>POOJASHREE | Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+body{background:#87CEEB;color:#222;overflow-x:hidden}
+header{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.9);backdrop-filter:blur(10px);z-index:100;padding:15px 8%;border-bottom:1px solid #ddd}
+nav{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:24px;font-weight:700;color:#000} .logo span{color:#0077b6}
+.nav-links{display:flex;gap:25px;list-style:none}
+.nav-link{color:#333;text-decoration:none;font-weight:500;transition:0.3s} .nav-link:hover,.nav-link.active{color:#0077b6}
+.home{min-height:100vh;display:flex;justify-content:space-between;align-items:center;padding:120px 8% 60px;flex-wrap:wrap;gap:40px}
+.home-content h1{font-size:35px;line-height:1.2} .home-content h1 span{color:#0077b6}
+.home-content h2{font-size:22px;color:#444;margin:15px 0;font-weight:400}
+.intro{color:#333;max-width:500px;margin:20px 0;line-height:1.6}
+.home-buttons{display:flex;gap:15px;margin-top:25px}
+.btn{background:#012a4a;color:#fff;padding:12px 25px;border-radius:30px;text-decoration:none;font-weight:600;display:inline-block;transition:0.3s;border:none}
+.btn:hover{transform:translateY(-3px)}
+.profile-img{width:320px;height:320px;border-radius:50%;border:8px solid #fff;box-shadow:0 10px 30px rgba(0,0,0,0.2);overflow:hidden;background:#fff}
+.profile-img img{width:100%;height:100%;object-fit:cover;display:block}
+.section{padding:80px 8%;background:#fff;margin:20px 0} .section:nth-child(even){background:#e0f6ff}
+.section-title{text-align:center;font-size:30px;margin-bottom:40px;color:#012a4a}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px}
+.skill-card{background:#87CEEB;padding:20px;border-radius:10px;text-align:center;color:#012a4a;font-weight:600}
+.contact-box{max-width:600px;margin:0 auto;text-align:center;background:#87CEEB;padding:30px;border-radius:15px}
+</style>
 </head>
 <body>
-<header><nav><div class="logo">POOJASHREE<span>.</span></div><ul class="nav-links"><li><a href="#home" class="nav-link active">Home</a></li><li><a href="#about" class="nav-link">About</a></li><li><a href="#skills" class="nav-link">Skills</a></li><li><a href="#resume" class="nav-link">Resume</a></li><li><a href="#contact" class="nav-link">Contact</a></li></ul></nav></header>
+<header><nav><div class="logo">Pooja<span>shree</span></div><ul class="nav-links"><li><a href="#home" class="nav-link active">Home</a></li><li><a href="#about" class="nav-link">About</a></li><li><a href="#skills" class="nav-link">Skills</a></li><li><a href="#contact" class="nav-link">Contact</a></li></ul></nav></header>
 
 <section id="home" class="home">
 <div class="home-content">
-<p class="welcome">WELCOME TO MY PORTFOLIO</p>
-<h1>Hello, I'm <span>POOJASHREE</span></h1>
-<h2>Diploma Computer Science & Engineering Student</h2>
-<p class="intro">I am a passionate Computer Science and Engineering student interested in web development, programming and modern technologies. I enjoy learning new skills and creating creative projects.</p>
-<div class="home-buttons"><a href="#about" class="btn">About Me</a><a href="#contact" class="btn yellow-btn">Contact Me</a></div>
+<h1>Hi, I'm <span>POOJASHREE</span></h1>
+<h2>Computer Science Student</h2>
+<p class="intro">I am Poojashree from KPT Mangaluru. Passionate about Web Development and learning new technologies. Currently studying Diploma in Computer Science.</p>
+<div class="home-buttons"><a href="#contact" class="btn">Contact Me</a></div>
+<p style="margin-top:20px;"><i class="fas fa-phone"></i> 6361049667<br><i class="fas fa-envelope"></i> p2298198@gmail.com</p>
 </div>
-<div class="profile-container"><div class="profile-circle"><img src="https://i.pravatar.cc/400?img=5" alt="POOJASHREE"></div></div>
-</section>
-
-<section id="about" class="section">
-<div class="section-heading"><p>GET TO KNOW ME</p><h1>About <span>Me</span></h1></div>
-<div class="about-container">
-<div class="about-content"><h2>I'm POOJASHREE 👩‍💻</h2><p>I am a Diploma Computer Science and Engineering student at Karnataka Government Polytechnic, Mangaluru. I am passionate about technology, programming and web development.</p><p>I have an interest in developing websites and applications using technologies such as HTML, CSS, JavaScript, Python, Java and React.</p><p>My goal is to build a successful career in the software industry and become a skilled software developer.</p></div>
-<div class="about-details">
-<div class="detail-card"><i class="fa-solid fa-graduation-cap"></i><h3>Education</h3><p>Diploma in CSE</p></div>
-<div class="detail-card"><i class="fa-solid fa-building-columns"></i><h3>College</h3><p>KPT, Mangaluru</p></div>
-<div class="detail-card"><i class="fa-solid fa-code"></i><h3>Interest</h3><p>Web Development</p></div>
-<div class="detail-card"><i class="fa-solid fa-bullseye"></i><h3>Career Goal</h3><p>Software Developer</p></div>
-</div>
+<div class="profile-img">
+<img src="profile.jpeg" alt="POOJASHREE">
 </div>
 </section>
 
-<section id="skills" class="section">
-<div class="section-heading"><p>MY TECHNICAL ABILITIES</p><h1>My <span>Skills</span></h1></div>
-<div class="skills-container">
-<div class="skill-card"><i class="fa-brands fa-python"></i><h2>Python</h2><p>Programming and problem solving using Python.</p></div>
-<div class="skill-card"><i class="fa-brands fa-html5"></i><h2>HTML</h2><p>Creating the structure of modern websites.</p></div>
-<div class="skill-card"><i class="fa-brands fa-css3-alt"></i><h2>CSS</h2><p>Designing attractive and responsive websites.</p></div>
-<div class="skill-card"><i class="fa-brands fa-js"></i><h2>JavaScript</h2><p>Creating interactive and dynamic web pages.</p></div>
-<div class="skill-card"><i class="fa-brands fa-java"></i><h2>Java</h2><p>Object-oriented programming and application development.</p></div>
-<div class="skill-card"><i class="fa-brands fa-react"></i><h2>React</h2><p>Building interactive user interfaces using React.</p></div>
-<div class="skill-card"><i class="fa-brands fa-docker"></i><h2>Docker</h2><p>Learning containerization and application deployment.</p></div>
-<div class="skill-card"><i class="fa-solid fa-database"></i><h2>SQL</h2><p>Managing databases and writing SQL queries.</p></div>
-</div>
-</section>
+<section id="about" class="section"><h2 class="section-title">About Me</h2><p style="text-align:center;max-width:700px;margin:0 auto;">I am a dedicated Computer Science student at Karnataka Govt Polytechnic Mangaluru. I love creating websites with beautiful designs. My goal is to become a full-stack developer. This portfolio is made with skyblue theme as per my choice.</p></section>
 
-<section id="resume" class="section">
-<div class="section-heading"><p>MY PROFESSIONAL DETAILS</p><h1>My <span>Resume</span></h1></div>
-<div class="resume-container"><i class="fa-solid fa-file-pdf"></i><h2>POOJASHREE's Resume</h2><p>Diploma Computer Science & Engineering Student</p><p>Karnataka Government Polytechnic, Mangaluru</p><div class="resume-buttons"><a href="#" class="btn"><i class="fa-solid fa-eye"></i> View Resume</a><a href="#" class="btn yellow-btn"><i class="fa-solid fa-download"></i> Download Resume</a></div></div>
-</section>
+<section id="skills" class="section"><h2 class="section-title">My Skills</h2><div class="skills-grid"><div class="skill-card">HTML</div><div class="skill-card">CSS</div><div class="skill-card">JavaScript</div><div class="skill-card">Python</div><div class="skill-card">C Programming</div><div class="skill-card">GitHub</div></div></section>
 
-<section id="contact" class="section">
-<div class="section-heading"><p>LET'S CONNECT</p><h1>Contact <span>Me</span></h1></div>
-<div class="contact-container">
-<div class="contact-form"><h2>Send Me a Message</h2><br><form id="contactForm"><input type="text" placeholder="Your Name" required><input type="email" placeholder="Your Email" required><textarea rows="6" placeholder="Your Message" required></textarea><button type="submit" class="btn yellow-btn"><i class="fa-solid fa-paper-plane"></i> Send Message</button></form></div>
-<div class="contact-info"><h2>Contact Information</h2>
-<div class="contact-item"><i class="fa-solid fa-phone"></i><div><h3>Phone</h3><p>6361049667</p></div></div>
-<div class="contact-item"><i class="fa-solid fa-envelope"></i><div><h3>Email</h3><p>p2298198@gmail.com</p></div></div>
-<div class="contact-item"><i class="fa-solid fa-location-dot"></i><div><h3>Place</h3><p>Mangaluru, Karnataka, India</p></div></div>
-<h3 style="margin-top:20px">Connect With Me</h3>
-<div class="social-icons"><a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a><a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a><a href="https://wa.me/916361049667" target="_blank"><i class="fa-brands fa-whatsapp"></i></a><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
-</div>
-</div>
-</section>
+<section id="contact" class="section"><h2 class="section-title">Contact Me</h2><div class="contact-box"><h3>POOJASHREE</h3><p><i class="fas fa-map-marker-alt"></i> KPT Mangaluru, Karnataka</p><p><i class="fas fa-phone"></i> 6361049667</p><p><i class="fas fa-envelope"></i> p2298198@gmail.com</p><br><a href="mailto:p2298198@gmail.com" class="btn">Send Email</a></div></section>
 
-<footer><h3>Computer Science and Engineering</h3><p>Karnataka Government Polytechnic, Mangaluru</p><p>© 2026 POOJASHREE | All Rights Reserved</p></footer>
-
-<script>
-document.getElementById('contactForm').addEventListener('submit', function(e){
- e.preventDefault(); alert('Thank you POOJASHREE! Message sent successfully ❤️'); e.target.reset();
-});
-</script>
 </body>
 </html>
